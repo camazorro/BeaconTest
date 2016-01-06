@@ -1,1 +1,1 @@
-# beaconTest
+# Beacon Test using Titanium Appcelerator
