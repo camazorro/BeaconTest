@@ -1,0 +1,6 @@
+<Alloy>
+	<Window class="container">
+		<Button top="50%" onClick="startMonitor" id="btnMonitor">Start Monitor</Button>
+		<Label id="label" onClick="doClick" top="55%" ></Label>
+	</Window>
+</Alloy>
