@@ -1,6 +1,39 @@
 <Alloy>
-	<Window class="container">
-		<Button top="50%" onClick="startMonitor" id="btnMonitor">Start Monitor</Button>
-		<Label id="label" onClick="doClick" top="55%" ></Label>
-	</Window>
+	<NavigationWindow>
+		<Window class="container" title="Beacon Test">
+			<LeftNavButton>
+				<Button onClick="stopMonitor" id="btnMonitorStop">Stop</Button>				
+			</LeftNavButton>
+			<RightNavButton>
+				<Button onClick="startMonitor" id="btnMonitorStart">Start</Button>	
+			</RightNavButton>
+			
+			<ListView id="listView" defaultItemTemplate="default">
+						
+			    <Templates>
+			        <ItemTemplate name="default">			            
+			            <Label bindId="time" id="time" />
+			            <Label bindId="event" id="event" />
+			            <Label bindId="uuid" id="uuid" />
+			        </ItemTemplate>
+			        
+			        <ItemTemplate name="enteredRegion">			            
+			            <Label bindId="time" id="time" />
+			            <Label bindId="event" id="event" />
+			            <Label bindId="uuid" id="uuid" />
+			        </ItemTemplate>			        
+			
+			        <ItemTemplate name="exitedRegion">			            
+			            <Label bindId="time" id="time" />
+			            <Label bindId="event" id="event" />
+			            <Label bindId="uuid" id="uuid" />
+			        </ItemTemplate>			
+			    </Templates>
+			
+			    <ListSection headerTitle="Beacons Events">
+			    </ListSection>
+			</ListView>			
+		</Window>
+	</NavigationWindow>
+
 </Alloy>
